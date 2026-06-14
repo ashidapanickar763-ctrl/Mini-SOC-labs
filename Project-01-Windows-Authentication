@@ -1,0 +1,22 @@
+# Project 1: Windows Authentication Investigation
+
+## Objective
+Investigate Windows failed and successful login events.
+
+## Tools Used
+- Windows VM
+- Event Viewer
+
+## Event IDs Investigated
+- 4625 (Failed Logon)
+- 4624 (Successful Logon)
+
+## Findings
+- Generated failed login attempts.
+- Generated a successful login.
+- Investigated Windows Security logs.
+- Correlated authentication events.
+- Classified the activity as benign.
+
+## Status
+✅ Completed
