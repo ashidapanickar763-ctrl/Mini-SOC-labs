@@ -11,3 +11,4 @@ Lab Setup
 | Virtualization |                                                  VMware |
 | Attacker Machine |                                                  Kali Linux |
 | Target Machine |                                                     Windows |
+----------------------------------------------------------------------------------------------
