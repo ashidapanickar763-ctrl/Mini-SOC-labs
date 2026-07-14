@@ -23,16 +23,16 @@ Splunk Enterprise, Splunk Universal Forwarder, VMware, SPL (Splunk Search Proces
 7. Compared against successful logins: `index=* EventCode=4624 | stats count by Account_Name`
 
 ## Evidence
-![Failed login search results](./screenshots/splunk-4625-results.png)
+![Failed login search results](./screenshots/failed-logins.png)
 *Failed login attempts (Event ID 4625)*
 
-![Failed logins by account](./screenshots/splunk-4625-stats-by-account.png)
+![Failed logins by account](./screenshots/failed-logins-by-accountname.png)
 *Failed login count grouped by account*
 
-![Failed logins timechart](./screenshots/splunk-4625-timechart.png)
+![Failed logins timechart](./screenshots/chart-showing-spikes-by-date.png)
 *Failed login attempts over time*
 
-![Successful logins by account](./screenshots/splunk-4624-stats-by-account.png)
+![Successful logins by account](./screenshots/successful-login-by-accountname.png)
 *Successful login events by account*
 
 ## Key Findings
