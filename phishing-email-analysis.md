@@ -100,13 +100,13 @@ Pretends to be a real UC Berkeley professor offering a remote research assistant
 ## Evidence
 *(Example 2 has no screenshot below since the archive only provided a written breakdown, not an original email image — noted in that section above.)*
 
-![Fake Assessment Report email](./screenshots/phishing-assessment-report.png)
+![Fake Assessment Report email](./screenshots/fake-assessment-report.png)
 
-![Fake Account Suspension email](./screenshots/phishing-account-suspension-email.png)
+![Fake Account Suspension email](./screenshots/fake-email-account-suspension.png)
 
-![Fake Office 365 login page](./screenshots/phishing-fake-office-login.png)
+![Fake electronic payment email](./screenshots/fake-electronic-payment.png)
 
-![Fake internship offer email](./screenshots/phishing-internship-scam.png)
+![Fake internship offer email](./screenshots/fake-internship-offer.png)
 
 ## Key Findings
 - All four examples used a hidden link, a fake login page, or a direct request for sensitive information as the actual attack method.
