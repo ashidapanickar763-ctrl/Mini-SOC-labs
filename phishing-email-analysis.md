@@ -17,6 +17,7 @@ UC Berkeley Information Security Office — Phishing Examples Archive (security.
 ### 1. Fake Assessment Report Email
 **Sender:** Cynthia Burns `<cburns13@gapps.bcsds.org>`
 **Subject:** "Please Review Your 2025 Assessment Report"
+**Source:** https://security.berkeley.edu/news/fake-assessment-report-email-credential-theft
 
 **What I noticed:**
 - The sender's domain (`gapps.bcsds.org`) isn't a real, recognizable company domain
@@ -33,20 +34,16 @@ UC Berkeley Information Security Office — Phishing Examples Archive (security.
 
 **Verdict:** Phishing — trying to steal login credentials through a fake report link.
 
-### 2. Fake Fax Notification
-A "Fax Notification" style email with a sender fax number and a "View Fax" button.
-
-**What I noticed:**
-- No real explanation of who's sending this fax or why — just a vague sender label ("SMCH")
-- Recipient field just shows a generic address, not sent to me specifically
-- The "View Fax" button hides where it actually leads
-- Has a fake "this may contain confidential information" disclaimer at the bottom, probably added just to look more official
-- Doesn't feel urgent, more just mildly curious — a different approach than the usual "act now" phishing tone
-
-**Verdict:** Phishing — clicking through likely leads to a fake login page.
-
-### 3. Fake Electronic Payment (ACH) Message
+### 2. Fake Electronic Payment (ACH) Message
 This one pretends to be from a UC Berkeley IT technician, warning that email access will be lost unless action is taken.
+**Source:** https://security.berkeley.edu/node/2082
+
+**Note:** unlike the other examples, the archive didn't include an actual email screenshot for this one — only their written breakdown of the campaign, so my analysis here is based on that write-up rather than an original message I reviewed directly.
+
+**What I noticed (from the write-up):**
+- The whole pretext revolves around a payment/fund transfer that the recipient never actually initiated — designed to make someone click just to "check what this is about"
+- Subject lines given as examples (e.g., "Refund Pending: $399.99 Overpayment Detected") use specific-sounding numbers to seem more legitimate than a vague, generic message would
+- Impersonating an internal IT technician rather than an unknown outsider is a smarter move by the attacker, since people are less suspicious of someone who's supposedly "on their side"
 
 **What the archive explained:**
 - Pretends to be an internal IT person instead of some random outsider
@@ -57,8 +54,9 @@ This one pretends to be from a UC Berkeley IT technician, warning that email acc
 
 **Verdict:** Phishing — using fear about losing access to get people to hand over credentials.
 
-### 4. Fake Email Account Suspension Email
+### 3. Fake Email Account Suspension Email
 **Subject:** "ADVANCE WARNING"
+**Source:** https://security.berkeley.edu/node/2065
 
 Claims the account is on a list for deactivation and needs to be "verified" immediately, signed as "UNIVERSITY OF CALIFORNIA BERKELEY SERVICE DESK TEAM."
 
@@ -79,9 +77,10 @@ I actually got to see where the link leads: a page at `docs.google.com/forms/d/e
 
 **Verdict:** Phishing — confirmed by the mismatched web address behind a very convincing fake login page.
 
-### 5. Fake Internship Offer (Cal-1 Card / ID Theft)
+### 4. Fake Internship Offer (Cal-1 Card / ID Theft)
 **Sender:** "Prof. Stephen P. Hinshaw" `<hinshaw.berkeley.edu@gmail.com>`
 **Subject:** "Inquiry Received!"
+**Source:** https://security.berkeley.edu/news/cal-1-card-internship-scam-phish
 
 Pretends to be a real UC Berkeley professor offering a remote research assistant position — $350/week, under 7 hours a week, no experience needed — then asks for a scan of the applicant's student ID card and resume to "proceed."
 
@@ -99,9 +98,9 @@ Pretends to be a real UC Berkeley professor offering a remote research assistant
 **Verdict:** Phishing — trying to steal ID card information, disguised as a legit internship offer, using a real person's name and a sneaky look-alike email address.
 
 ## Evidence
-![Fake Assessment Report email](./screenshots/phishing-assessment-report.png)
+*(Example 2 has no screenshot below since the archive only provided a written breakdown, not an original email image — noted in that section above.)*
 
-![Fake Fax Notification email](./screenshots/phishing-fax-notification.png)
+![Fake Assessment Report email](./screenshots/phishing-assessment-report.png)
 
 ![Fake Account Suspension email](./screenshots/phishing-account-suspension-email.png)
 
@@ -110,9 +109,9 @@ Pretends to be a real UC Berkeley professor offering a remote research assistant
 ![Fake internship offer email](./screenshots/phishing-internship-scam.png)
 
 ## Key Findings
-- All five examples used a hidden link, a fake login page, or a direct request for sensitive information as the actual attack method.
-- Each one used a different angle to get someone to act: curiosity (assessment report, fax), fear (payment/service loss, account suspension), and an attractive offer (internship) — not just one style of manipulation.
-- Every example had a sender domain that didn't match who it claimed to be from — sometimes obvious (a random domain), sometimes disguised to look real at a glance (berkeley.edu stuffed into a Gmail address).
+- All four examples used a hidden link, a fake login page, or a direct request for sensitive information as the actual attack method.
+- Each one used a different angle to get someone to act: curiosity (assessment report), fear (payment/service loss, account suspension), and an attractive offer (internship) — not just one style of manipulation.
+- Every example had a sender domain that didn't match who it claimed to be from — sometimes obvious (a random or unrelated domain), sometimes disguised to look real at a glance (berkeley.edu stuffed into a Gmail address).
 - The account suspension example was the only one where I could actually see the fake login page itself, which made the "check the URL, not how official it looks" lesson much more concrete.
 
 ## Insights / Analysis
@@ -123,7 +122,7 @@ Pretends to be a real UC Berkeley professor offering a remote research assistant
 - If this were a real reported alert, next steps would be checking the sender domain, checking where any link actually leads (using something like VirusTotal), and checking if others in the organization got the same email.
 
 ## What I Learned
-The biggest takeaway was that checking the sender's actual email domain is the single fastest, most reliable check — but I also learned it's not foolproof at a glance, since some addresses are deliberately built to look legitimate. Seeing the real fake Office 365 login page was probably the most useful part of this lab, because it made the "check the URL, not how official it looks" idea click in a way that just reading about it never would have. I also learned that phishing doesn't always rely on fear — sometimes it's curiosity, sometimes it's an appealing offer — so I need to stay alert regardless of the tone of the email.
+Doing this lab shifted how I read emails day to day, honestly. Before this, I'd have judged an email mostly on tone — did it sound urgent, did it sound weird. Now I check the sender's actual domain first, before reading anything else, since that turned out to be the one thing that never lied across all four examples, even when everything else about the email looked convincing. I also didn't expect cross-checking my own analysis against the archive's explanation to be this useful — in a couple of cases I'd spotted the obvious red flags but missed a detail the official write-up caught (like the exact reason the internship offer's sender address was suspicious), which showed me it's worth verifying my own judgment against a second source rather than assuming I caught everything myself.
 
 ## Skills Demonstrated
 `Phishing Analysis` `Social Engineering Pattern Recognition` `Email/Domain Verification` `Cross-Referencing Findings Against a Trusted Source`
