@@ -98,20 +98,22 @@ Pretends to be a real UC Berkeley professor offering a remote research assistant
 **Verdict:** Phishing — trying to steal ID card information, disguised as a legit internship offer, using a real person's name and a sneaky look-alike email address.
 
 ## Evidence
-*(Example 2 has no screenshot below since the archive only provided a written breakdown, not an original email image — noted in that section above.)*
-
+1.Fake Assessment Report Email
 ![Fake Assessment Report email](./screenshots/fake-assessment-report.png)
 
+2.Fake Account Suspension Email
 ![Fake Account Suspension email](./screenshots/fake-email-account-suspension.png)
 
-![Fake electronic payment email](./screenshots/fake-electronic-payment.png)
+3.Fake Electronic Payment Email
+![Fake electronic payment email](./screenshots/feke-electronic-payment.png)
 
+4.Fake Internship Offer Email
 ![Fake internship offer email](./screenshots/fake-internship-offer.png)
 
 ## Key Findings
 - All four examples used a hidden link, a fake login page, or a direct request for sensitive information as the actual attack method.
 - Each one used a different angle to get someone to act: curiosity (assessment report), fear (payment/service loss, account suspension), and an attractive offer (internship) — not just one style of manipulation.
-- Every example had a sender domain that didn't match who it claimed to be from — sometimes obvious (a random or unrelated domain), sometimes disguised to look real at a glance (berkeley.edu stuffed into a Gmail address).
+- Every example had  a sender domain that didn't match who it claimed to be from — sometimes obvious (a random or unrelated domain), sometimes disguised to look real at a glance (berkeley.edu stuffed into a Gmail address).
 - The account suspension example was the only one where I could actually see the fake login page itself, which made the "check the URL, not how official it looks" lesson much more concrete.
 
 ## Insights / Analysis
