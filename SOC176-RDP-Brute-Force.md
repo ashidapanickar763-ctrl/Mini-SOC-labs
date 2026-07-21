@@ -26,7 +26,11 @@ Investigate the alert, determine whether the activity was malicious, check if an
 7. Based on checking a sample of entries, initially concluded all attempts failed and submitted a "True Positive - contained" verdict, recommending the source IP be blocked.
 
 ## Evidence
-(screenshots to be added: `./screenshots/letsdefend-alert-details.png`, `./screenshots/virustotal-check.png`, `./screenshots/letsdefend-log-search.png`, `./screenshots/letsdefend-successful-login.png`)
+![Alert Details](./screenshots/letsdefend-alert-details.png)
+![VirusTotal Check](./screenshots/virustotal-check.png)
+![Log Search Results](./screenshots/letsdefend-log-search.png)
+![Successful Login Found](./screenshots/letsdefend-successful-login.png)
+ 
 
 ## Key Findings
 - Attacker IP 218.92.0.56 made 30 RDP connection attempts against host "Matthew" over a short window, cycling through different usernames.
