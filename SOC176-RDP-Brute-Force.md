@@ -27,10 +27,23 @@ Investigate the alert, determine whether the activity was malicious, check if an
 
 ## Evidence
 ![Alert Details](./screenshots/letsdefend-alert-details.png)
+
+ALERT DETAILS 
+
+
 ![VirusTotal Check](./screenshots/virustotal-check.png)
+
+VIRUSTOTAL CHECK
+
+
 ![Log Search Results](./screenshots/letsdefend-log-search.png)
+
+LOG SEARCH RESULTS 
+
+
 ![Successful Login Found](./screenshots/letsdefend-successful-login.png)
- 
+
+ SUCCESSFUL LOGIN
 
 ## Key Findings
 - Attacker IP 218.92.0.56 made 30 RDP connection attempts against host "Matthew" over a short window, cycling through different usernames.
